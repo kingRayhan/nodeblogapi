@@ -2,10 +2,11 @@
     "name": "nodeblogapi",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "dev": "nodemon .",
-        "start": "node ."
+        "dev": "cross-env NODE_ENV=dev nodemon .",
+        "start": "cross-env NODE_ENV=prod node .",
+        "debug": "ndb yarn dev"
     },
     "keywords": [],
     "author": "",
@@ -15,8 +16,14 @@
         "cors": "^2.8.5",
         "dotenv": "^8.0.0",
         "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
         "morgan": "^1.9.1",
         "mysql2": "^1.6.5",
         "sequelize": "^5.12.1"
+    },
+    "devDependencies": {
+        "boxen": "^4.1.0",
+        "cross-env": "^5.2.0",
+        "ndb": "^1.1.4"
     }
 }
